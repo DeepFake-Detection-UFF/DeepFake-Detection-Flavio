@@ -31,7 +31,7 @@ if __name__ == "__main__":
     val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False, num_workers=4)
 
     # Criar modelo Xception
-    model = timm.create_model("xception", pretrained=True, num_classes=2)
+    model = timm.create_model("xception41.tf_in1k", pretrained=True, num_classes=2)
     model.to(device)
 
     # Definir função de perda e otimizador
