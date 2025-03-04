@@ -67,3 +67,7 @@ if __name__ == "__main__":
         print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}, Accuracy: {accuracy:.2f}%")
 
     print("Treinamento concluído!")
+
+torch.save(model.state_dict(), "xception_deepfake.pth")
+print("Modelo salvo!")
+
