@@ -1,0 +1,32 @@
+FAKE technique: DeepFakeDetection
+
+--- Pre-trained Model ---
+PCA components retained: 19
+Accuracy: 0.9300
+F1-score (macro): 0.9297
+AUC: 1.0000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.86      0.92        50
+           1       0.88      1.00      0.93        50
+
+    accuracy                           0.93       100
+   macro avg       0.94      0.93      0.93       100
+weighted avg       0.94      0.93      0.93       100
+
+--- Fine-tuned Model ---
+Accuracy: 0.9400
+F1-score (macro): 0.9398
+AUC: 1.0000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.88      0.94        50
+           1       0.89      1.00      0.94        50
+
+    accuracy                           0.94       100
+   macro avg       0.95      0.94      0.94       100
+weighted avg       0.95      0.94      0.94       100

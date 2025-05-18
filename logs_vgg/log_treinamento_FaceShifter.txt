@@ -1,0 +1,77 @@
+Treinamento do modelo VGG16 para FAKE = FaceShifter
+
+=== Métricas por Época ===
+Época 1:
+  Loss: 2.7435
+  Accuracy: 0.5300
+  Val Loss: 1.1215
+  Val Accuracy: 0.5000
+
+Época 2:
+  Loss: 0.9690
+  Accuracy: 0.5400
+  Val Loss: 0.7591
+  Val Accuracy: 0.5000
+
+Época 3:
+  Loss: 0.7710
+  Accuracy: 0.5100
+  Val Loss: 0.7405
+  Val Accuracy: 0.4900
+
+Época 4:
+  Loss: 0.7176
+  Accuracy: 0.5100
+  Val Loss: 0.7140
+  Val Accuracy: 0.5000
+
+Época 5:
+  Loss: 0.7018
+  Accuracy: 0.5400
+  Val Loss: 0.7087
+  Val Accuracy: 0.5000
+
+Época 6:
+  Loss: 0.7038
+  Accuracy: 0.4700
+  Val Loss: 0.7048
+  Val Accuracy: 0.4800
+
+Época 7:
+  Loss: 0.7013
+  Accuracy: 0.4500
+  Val Loss: 0.7036
+  Val Accuracy: 0.5000
+
+Época 8:
+  Loss: 0.6997
+  Accuracy: 0.4700
+  Val Loss: 0.7050
+  Val Accuracy: 0.4800
+
+Época 9:
+  Loss: 0.6948
+  Accuracy: 0.5400
+  Val Loss: 0.7003
+  Val Accuracy: 0.5100
+
+Época 10:
+  Loss: 0.6976
+  Accuracy: 0.4500
+  Val Loss: 0.6969
+  Val Accuracy: 0.5200
+
+=== Avaliação Final ===
+Accuracy: 0.5200
+F1-score (macro): 0.4956
+AUC: 0.5120
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        REAL       0.51      0.74      0.61        50
+        FAKE       0.54      0.30      0.38        50
+
+    accuracy                           0.52       100
+   macro avg       0.52      0.52      0.50       100
+weighted avg       0.52      0.52      0.50       100

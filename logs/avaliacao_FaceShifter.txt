@@ -1,0 +1,32 @@
+FAKE technique: FaceShifter
+
+--- Pre-trained Model ---
+PCA components retained: 11
+Accuracy: 0.5000
+F1-score (macro): 0.4998
+AUC: 0.5232
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.50      0.52      0.51        50
+           1       0.50      0.48      0.49        50
+
+    accuracy                           0.50       100
+   macro avg       0.50      0.50      0.50       100
+weighted avg       0.50      0.50      0.50       100
+
+--- Fine-tuned Model ---
+Accuracy: 0.5200
+F1-score (macro): 0.4956
+AUC: 0.5120
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.51      0.74      0.61        50
+           1       0.54      0.30      0.38        50
+
+    accuracy                           0.52       100
+   macro avg       0.52      0.52      0.50       100
+weighted avg       0.52      0.52      0.50       100

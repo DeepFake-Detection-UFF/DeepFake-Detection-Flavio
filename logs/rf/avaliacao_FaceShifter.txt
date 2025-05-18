@@ -1,0 +1,33 @@
+FAKE technique: FaceShifter
+
+--- Pre-trained Model (Random Forest) ---
+PCA components retained: 11
+Best hyperparameters: {'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 300}
+Accuracy: 0.5100
+F1-score (macro): 0.4987
+AUC: 0.5118
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.51      0.66      0.57        50
+           1       0.51      0.36      0.42        50
+
+    accuracy                           0.51       100
+   macro avg       0.51      0.51      0.50       100
+weighted avg       0.51      0.51      0.50       100
+
+--- Fine-tuned Model ---
+Accuracy: 0.5200
+F1-score (macro): 0.4956
+AUC: 0.5120
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.51      0.74      0.61        50
+           1       0.54      0.30      0.38        50
+
+    accuracy                           0.52       100
+   macro avg       0.52      0.52      0.50       100
+weighted avg       0.52      0.52      0.50       100

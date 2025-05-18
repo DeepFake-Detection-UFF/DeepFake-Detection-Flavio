@@ -1,0 +1,77 @@
+Treinamento do modelo VGG16 para FAKE = DeepFakeDetection
+
+=== Métricas por Época ===
+Época 1:
+  Loss: 0.3205
+  Accuracy: 0.8700
+  Val Loss: 0.1063
+  Val Accuracy: 0.9500
+
+Época 2:
+  Loss: 0.0026
+  Accuracy: 1.0000
+  Val Loss: 0.0334
+  Val Accuracy: 0.9900
+
+Época 3:
+  Loss: 0.0015
+  Accuracy: 1.0000
+  Val Loss: 0.0705
+  Val Accuracy: 0.9600
+
+Época 4:
+  Loss: 0.0027
+  Accuracy: 1.0000
+  Val Loss: 0.0105
+  Val Accuracy: 1.0000
+
+Época 5:
+  Loss: 0.0002
+  Accuracy: 1.0000
+  Val Loss: 0.1599
+  Val Accuracy: 0.9500
+
+Época 6:
+  Loss: 0.0002
+  Accuracy: 1.0000
+  Val Loss: 0.3495
+  Val Accuracy: 0.9300
+
+Época 7:
+  Loss: 0.0001
+  Accuracy: 1.0000
+  Val Loss: 0.5028
+  Val Accuracy: 0.8800
+
+Época 8:
+  Loss: 0.0001
+  Accuracy: 1.0000
+  Val Loss: 0.5881
+  Val Accuracy: 0.8600
+
+Época 9:
+  Loss: 0.0000
+  Accuracy: 1.0000
+  Val Loss: 0.5563
+  Val Accuracy: 0.8700
+
+Época 10:
+  Loss: 0.0007
+  Accuracy: 1.0000
+  Val Loss: 0.2797
+  Val Accuracy: 0.9400
+
+=== Avaliação Final ===
+Accuracy: 0.9400
+F1-score (macro): 0.9398
+AUC: 1.0000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        REAL       1.00      0.88      0.94        50
+        FAKE       0.89      1.00      0.94        50
+
+    accuracy                           0.94       100
+   macro avg       0.95      0.94      0.94       100
+weighted avg       0.95      0.94      0.94       100
