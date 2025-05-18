@@ -2,76 +2,196 @@ Treinamento do modelo VGG16 para FAKE = DeepFakeDetection
 
 === Métricas por Época ===
 Época 1:
-  Loss: 0.3205
-  Accuracy: 0.8700
-  Val Loss: 0.1063
-  Val Accuracy: 0.9500
+  Loss: 6.5387
+  Accuracy: 0.6800
+  Val Loss: 5.5187
+  Val Accuracy: 0.8100
 
 Época 2:
-  Loss: 0.0026
-  Accuracy: 1.0000
-  Val Loss: 0.0334
-  Val Accuracy: 0.9900
+  Loss: 5.3390
+  Accuracy: 0.8700
+  Val Loss: 5.4553
+  Val Accuracy: 0.8200
 
 Época 3:
-  Loss: 0.0015
-  Accuracy: 1.0000
-  Val Loss: 0.0705
-  Val Accuracy: 0.9600
+  Loss: 5.3215
+  Accuracy: 0.9600
+  Val Loss: 5.1984
+  Val Accuracy: 0.9100
 
 Época 4:
-  Loss: 0.0027
-  Accuracy: 1.0000
-  Val Loss: 0.0105
-  Val Accuracy: 1.0000
+  Loss: 5.0641
+  Accuracy: 0.9900
+  Val Loss: 5.4071
+  Val Accuracy: 0.8400
 
 Época 5:
-  Loss: 0.0002
-  Accuracy: 1.0000
-  Val Loss: 0.1599
-  Val Accuracy: 0.9500
+  Loss: 5.0185
+  Accuracy: 0.9700
+  Val Loss: 5.0827
+  Val Accuracy: 0.8900
 
 Época 6:
-  Loss: 0.0002
-  Accuracy: 1.0000
-  Val Loss: 0.3495
-  Val Accuracy: 0.9300
-
-Época 7:
-  Loss: 0.0001
-  Accuracy: 1.0000
-  Val Loss: 0.5028
-  Val Accuracy: 0.8800
-
-Época 8:
-  Loss: 0.0001
-  Accuracy: 1.0000
-  Val Loss: 0.5881
-  Val Accuracy: 0.8600
-
-Época 9:
-  Loss: 0.0000
-  Accuracy: 1.0000
-  Val Loss: 0.5563
+  Loss: 4.9533
+  Accuracy: 0.9900
+  Val Loss: 5.4194
   Val Accuracy: 0.8700
 
+Época 7:
+  Loss: 4.9718
+  Accuracy: 0.9700
+  Val Loss: 5.1181
+  Val Accuracy: 0.9000
+
+Época 8:
+  Loss: 5.2695
+  Accuracy: 0.9700
+  Val Loss: 4.9550
+  Val Accuracy: 0.9100
+
+Época 9:
+  Loss: 4.8745
+  Accuracy: 0.9700
+  Val Loss: 5.0337
+  Val Accuracy: 0.8500
+
 Época 10:
-  Loss: 0.0007
-  Accuracy: 1.0000
-  Val Loss: 0.2797
+  Loss: 4.8340
+  Accuracy: 0.9800
+  Val Loss: 4.8752
+  Val Accuracy: 0.9500
+
+Época 11:
+  Loss: 4.7531
+  Accuracy: 0.9900
+  Val Loss: 4.9858
   Val Accuracy: 0.9400
 
+Época 12:
+  Loss: 4.7762
+  Accuracy: 0.9800
+  Val Loss: 5.3290
+  Val Accuracy: 0.8600
+
+Época 13:
+  Loss: 4.6407
+  Accuracy: 1.0000
+  Val Loss: 4.8797
+  Val Accuracy: 0.9500
+
+Época 14:
+  Loss: 4.6603
+  Accuracy: 0.9800
+  Val Loss: 4.9667
+  Val Accuracy: 0.9500
+
+Época 15:
+  Loss: 4.6008
+  Accuracy: 0.9900
+  Val Loss: 4.6998
+  Val Accuracy: 0.9400
+
+Época 16:
+  Loss: 4.5705
+  Accuracy: 1.0000
+  Val Loss: 4.6105
+  Val Accuracy: 0.9700
+
+Época 17:
+  Loss: 4.5535
+  Accuracy: 1.0000
+  Val Loss: 4.5965
+  Val Accuracy: 0.9600
+
+Época 18:
+  Loss: 4.5315
+  Accuracy: 1.0000
+  Val Loss: 4.5743
+  Val Accuracy: 0.9600
+
+Época 19:
+  Loss: 4.5131
+  Accuracy: 1.0000
+  Val Loss: 4.5432
+  Val Accuracy: 0.9700
+
+Época 20:
+  Loss: 4.4927
+  Accuracy: 1.0000
+  Val Loss: 4.5139
+  Val Accuracy: 0.9900
+
+Época 21:
+  Loss: 4.4684
+  Accuracy: 1.0000
+  Val Loss: 4.5301
+  Val Accuracy: 0.9600
+
+Época 22:
+  Loss: 4.4519
+  Accuracy: 1.0000
+  Val Loss: 4.5544
+  Val Accuracy: 0.9500
+
+Época 23:
+  Loss: 4.4289
+  Accuracy: 1.0000
+  Val Loss: 4.5384
+  Val Accuracy: 0.9500
+
+Época 24:
+  Loss: 4.4193
+  Accuracy: 1.0000
+  Val Loss: 4.5185
+  Val Accuracy: 0.9500
+
+Época 25:
+  Loss: 4.4032
+  Accuracy: 1.0000
+  Val Loss: 4.4771
+  Val Accuracy: 0.9500
+
+Época 26:
+  Loss: 4.3932
+  Accuracy: 1.0000
+  Val Loss: 4.4351
+  Val Accuracy: 0.9700
+
+Época 27:
+  Loss: 4.3856
+  Accuracy: 1.0000
+  Val Loss: 4.4110
+  Val Accuracy: 0.9800
+
+Época 28:
+  Loss: 4.3726
+  Accuracy: 1.0000
+  Val Loss: 4.3963
+  Val Accuracy: 0.9900
+
+Época 29:
+  Loss: 4.3608
+  Accuracy: 1.0000
+  Val Loss: 4.3852
+  Val Accuracy: 0.9900
+
+Época 30:
+  Loss: 4.3521
+  Accuracy: 1.0000
+  Val Loss: 4.3757
+  Val Accuracy: 0.9900
+
 === Avaliação Final ===
-Accuracy: 0.9400
-F1-score (macro): 0.9398
+Accuracy: 0.9900
+F1-score (macro): 0.9900
 AUC: 1.0000
 
 Classification Report:
               precision    recall  f1-score   support
 
-        REAL       1.00      0.88      0.94        50
-        FAKE       0.89      1.00      0.94        50
+        REAL       1.00      0.98      0.99        50
+        FAKE       0.98      1.00      0.99        50
 
-    accuracy                           0.94       100
-   macro avg       0.95      0.94      0.94       100
-weighted avg       0.95      0.94      0.94       100
+    accuracy                           0.99       100
+   macro avg       0.99      0.99      0.99       100
+weighted avg       0.99      0.99      0.99       100

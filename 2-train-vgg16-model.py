@@ -11,6 +11,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 import joblib
 
 # Verificar GPUs disponíveis
@@ -29,11 +30,12 @@ fake_test_paths = {folder: os.path.join(test_path, folder) for folder in subfold
 # Função para criar o modelo VGG16
 def create_vgg_model():
     base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
-    for layer in base_model.layers[:-4]:
+    for layer in base_model.layers[:-8]:  # Descongelar mais camadas
         layer.trainable = False
     x = base_model.output
     x = GlobalAveragePooling2D()(x)
-    x = Dense(512, activation='relu')(x)
+    x = Dense(512, activation='relu', kernel_regularizer=l2(0.01))(x)
+    x = Dropout(0.5)(x)
     predictions = Dense(1, activation='sigmoid')(x)
     model = Model(inputs=base_model.input, outputs=predictions)
     model.compile(optimizer=Adam(learning_rate=1e-4), loss='binary_crossentropy', metrics=['accuracy'])
@@ -66,55 +68,48 @@ def load_images(real_path, fake_path, fake_name, dataset_type):
 
 # Função para treinar e avaliar o modelo
 def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_path, fake_name):
-    # Carregar dados de treino
     X_train, y_train = load_images(real_train_path, fake_train_path, fake_name, "training")
     if len(X_train) == 0:
         print(f"[ERRO] Nenhuma imagem válida encontrada para {fake_name} (treinamento)")
         return
-
-    # Carregar dados de teste
     X_test, y_test = load_images(real_test_path, fake_test_path, fake_name, "test")
     if len(X_test) == 0:
         print(f"[ERRO] Nenhuma imagem válida encontrada para {fake_name} (teste)")
         return
 
-    # Criar data generator para aumento de dados
     datagen = ImageDataGenerator(
-        rotation_range=20,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
+        rotation_range=30,
+        width_shift_range=0.3,
+        height_shift_range=0.3,
+        shear_range=0.2,
+        zoom_range=0.2,
+        brightness_range=[0.8, 1.2],
         horizontal_flip=True,
         fill_mode='nearest'
     )
     datagen.fit(X_train)
 
-    # Criar e treinar o modelo
     model = create_vgg_model()
-    # Callback para salvar métricas por época
     log_file = f"logs_vgg/log_treinamento_{fake_name}.txt"
     os.makedirs("logs_vgg", exist_ok=True)
     with open(log_file, "w") as f:
         f.write(f"Treinamento do modelo VGG16 para FAKE = {fake_name}\n\n")
-        f.write("=== Métricas por Época ===\n")
-    
-    class TrainingLogger(tf.keras.callbacks.Callback):
-        def on_epoch_end(self, epoch, logs=None):
-            with open(log_file, "a") as f:
-                f.write(f"Época {epoch + 1}:\n")
-                f.write(f"  Loss: {logs['loss']:.4f}\n")
-                f.write(f"  Accuracy: {logs['accuracy']:.4f}\n")
-                f.write(f"  Val Loss: {logs['val_loss']:.4f}\n")
-                f.write(f"  Val Accuracy: {logs['val_accuracy']:.4f}\n\n")
+
+    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=3, min_lr=1e-6)
 
     history = model.fit(
         datagen.flow(X_train, y_train, batch_size=32),
-        epochs=10,
+        epochs=30,
         validation_data=(X_test, y_test),
         verbose=1,
-        callbacks=[TrainingLogger()]
+        callbacks=[TrainingLogger(), early_stopping, lr_scheduler]
     )
 
-    # Avaliar o modelo
+    # Plotar curvas de aprendizado
+    plot_learning_curves(history, fake_name)
+
+    # Avaliação
     y_pred_prob = model.predict(X_test, verbose=0)
     y_pred = (y_pred_prob > 0.5).astype(int)
     acc = accuracy_score(y_test, y_pred)
@@ -127,14 +122,12 @@ def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_
     print("AUC:", auc)
     print("Classification Report:\n", classification_report(y_test, y_pred, target_names=["REAL", "FAKE"]))
 
-    # Matriz de confusão
     cm = confusion_matrix(y_test, y_pred)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["REAL", "FAKE"])
     disp.plot()
     plt.title(f"Matriz de Confusão - {fake_name}")
     plt.show()
 
-    # Salvar resultados no log
     with open(log_file, "a") as f:
         f.write("=== Avaliação Final ===\n")
         f.write(f"Accuracy: {acc:.4f}\n")
@@ -142,11 +135,23 @@ def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_
         f.write(f"AUC: {auc:.4f}\n")
         f.write("\nClassification Report:\n")
         f.write(classification_report(y_test, y_pred, target_names=["REAL", "FAKE"]))
-    
-    # Salvar modelo
-    os.makedirs("modelos_vgg", exist_ok=True)
+
     model.save(f"modelos_vgg/vgg_{fake_name}.h5")
     print(f"[INFO] Resultados salvos em {log_file}")
+
+def plot_learning_curves(history, fake_name):
+    plt.figure(figsize=(12, 4))
+    plt.subplot(1, 2, 1)
+    plt.plot(history.history['loss'], label='Train Loss')
+    plt.plot(history.history['val_loss'], label='Val Loss')
+    plt.title(f'Loss - {fake_name}')
+    plt.legend()
+    plt.subplot(1, 2, 2)
+    plt.plot(history.history['accuracy'], label='Train Accuracy')
+    plt.plot(history.history['val_accuracy'], label='Val Accuracy')
+    plt.title(f'Accuracy - {fake_name}')
+    plt.legend()
+    plt.show()
 
 # Função principal para treinar todos os modelos
 def train_all_vgg_models():

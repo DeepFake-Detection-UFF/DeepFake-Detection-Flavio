@@ -2,76 +2,196 @@ Treinamento do modelo VGG16 para FAKE = NeuralTextures
 
 === Métricas por Época ===
 Época 1:
-  Loss: 1.6083
-  Accuracy: 0.5200
-  Val Loss: 0.8423
-  Val Accuracy: 0.5200
+  Loss: 8.0112
+  Accuracy: 0.4300
+  Val Loss: 5.9619
+  Val Accuracy: 0.5000
 
 Época 2:
-  Loss: 0.8719
-  Accuracy: 0.4900
-  Val Loss: 0.7340
+  Loss: 5.8837
+  Accuracy: 0.5100
+  Val Loss: 5.8142
   Val Accuracy: 0.5000
 
 Época 3:
-  Loss: 0.7051
-  Accuracy: 0.5300
-  Val Loss: 0.7175
+  Loss: 5.7500
+  Accuracy: 0.5700
+  Val Loss: 5.7540
   Val Accuracy: 0.5000
 
 Época 4:
-  Loss: 0.7087
-  Accuracy: 0.4600
-  Val Loss: 0.7100
+  Loss: 5.7570
+  Accuracy: 0.5300
+  Val Loss: 5.7116
   Val Accuracy: 0.5000
 
 Época 5:
-  Loss: 0.7150
-  Accuracy: 0.4500
-  Val Loss: 0.7055
+  Loss: 5.6977
+  Accuracy: 0.4600
+  Val Loss: 5.6789
   Val Accuracy: 0.5000
 
 Época 6:
-  Loss: 0.7044
-  Accuracy: 0.4800
-  Val Loss: 0.7033
+  Loss: 5.6626
+  Accuracy: 0.5100
+  Val Loss: 5.6390
   Val Accuracy: 0.5000
 
 Época 7:
-  Loss: 0.7019
-  Accuracy: 0.4700
-  Val Loss: 0.7030
+  Loss: 5.6309
+  Accuracy: 0.5200
+  Val Loss: 5.6014
   Val Accuracy: 0.5000
 
 Época 8:
-  Loss: 0.6948
-  Accuracy: 0.5200
-  Val Loss: 0.7037
+  Loss: 5.6037
+  Accuracy: 0.4600
+  Val Loss: 5.5644
   Val Accuracy: 0.5000
 
 Época 9:
-  Loss: 0.6927
-  Accuracy: 0.5000
-  Val Loss: 0.7032
-  Val Accuracy: 0.5000
+  Loss: 5.5714
+  Accuracy: 0.4400
+  Val Loss: 5.5275
+  Val Accuracy: 0.5200
 
 Época 10:
-  Loss: 0.6860
+  Loss: 5.5202
   Accuracy: 0.5600
-  Val Loss: 0.7017
+  Val Loss: 5.4919
+  Val Accuracy: 0.5100
+
+Época 11:
+  Loss: 5.4855
+  Accuracy: 0.5000
+  Val Loss: 5.4594
+  Val Accuracy: 0.5100
+
+Época 12:
+  Loss: 5.4451
+  Accuracy: 0.5100
+  Val Loss: 5.4188
+  Val Accuracy: 0.5000
+
+Época 13:
+  Loss: 5.4112
+  Accuracy: 0.5700
+  Val Loss: 5.3790
+  Val Accuracy: 0.5000
+
+Época 14:
+  Loss: 5.3678
+  Accuracy: 0.5000
+  Val Loss: 5.3424
+  Val Accuracy: 0.4900
+
+Época 15:
+  Loss: 5.3299
+  Accuracy: 0.4900
+  Val Loss: 5.3076
+  Val Accuracy: 0.5100
+
+Época 16:
+  Loss: 5.2871
+  Accuracy: 0.5300
+  Val Loss: 5.2734
+  Val Accuracy: 0.5000
+
+Época 17:
+  Loss: 5.2770
+  Accuracy: 0.5000
+  Val Loss: 5.2317
+  Val Accuracy: 0.5000
+
+Época 18:
+  Loss: 5.2143
+  Accuracy: 0.4500
+  Val Loss: 5.1936
+  Val Accuracy: 0.5000
+
+Época 19:
+  Loss: 5.1973
+  Accuracy: 0.5200
+  Val Loss: 5.1568
+  Val Accuracy: 0.5000
+
+Época 20:
+  Loss: 5.1491
+  Accuracy: 0.5200
+  Val Loss: 5.1199
+  Val Accuracy: 0.5000
+
+Época 21:
+  Loss: 5.1029
+  Accuracy: 0.5100
+  Val Loss: 5.0832
+  Val Accuracy: 0.5200
+
+Época 22:
+  Loss: 5.0701
+  Accuracy: 0.5600
+  Val Loss: 5.0466
+  Val Accuracy: 0.5000
+
+Época 23:
+  Loss: 5.0295
+  Accuracy: 0.4700
+  Val Loss: 5.0103
+  Val Accuracy: 0.5000
+
+Época 24:
+  Loss: 4.9928
+  Accuracy: 0.5200
+  Val Loss: 4.9741
+  Val Accuracy: 0.5000
+
+Época 25:
+  Loss: 4.9597
+  Accuracy: 0.5000
+  Val Loss: 4.9381
+  Val Accuracy: 0.5100
+
+Época 26:
+  Loss: 4.9226
+  Accuracy: 0.4600
+  Val Loss: 4.9022
+  Val Accuracy: 0.5000
+
+Época 27:
+  Loss: 4.8885
+  Accuracy: 0.4300
+  Val Loss: 4.8665
+  Val Accuracy: 0.5400
+
+Época 28:
+  Loss: 4.8566
+  Accuracy: 0.4400
+  Val Loss: 4.8311
+  Val Accuracy: 0.5000
+
+Época 29:
+  Loss: 4.8143
+  Accuracy: 0.4600
+  Val Loss: 4.7958
+  Val Accuracy: 0.5100
+
+Época 30:
+  Loss: 4.7857
+  Accuracy: 0.5900
+  Val Loss: 4.7608
   Val Accuracy: 0.5000
 
 === Avaliação Final ===
 Accuracy: 0.5000
-F1-score (macro): 0.4998
-AUC: 0.5104
+F1-score (macro): 0.3333
+AUC: 0.4956
 
 Classification Report:
               precision    recall  f1-score   support
 
-        REAL       0.50      0.52      0.51        50
-        FAKE       0.50      0.48      0.49        50
+        REAL       0.00      0.00      0.00        50
+        FAKE       0.50      1.00      0.67        50
 
     accuracy                           0.50       100
-   macro avg       0.50      0.50      0.50       100
-weighted avg       0.50      0.50      0.50       100
+   macro avg       0.25      0.50      0.33       100
+weighted avg       0.25      0.50      0.33       100

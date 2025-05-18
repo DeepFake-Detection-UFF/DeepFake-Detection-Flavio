@@ -2,76 +2,196 @@ Treinamento do modelo VGG16 para FAKE = Deepfakes
 
 === Métricas por Época ===
 Época 1:
-  Loss: 1.9763
-  Accuracy: 0.4200
-  Val Loss: 0.9057
-  Val Accuracy: 0.5200
+  Loss: 7.0029
+  Accuracy: 0.5400
+  Val Loss: 5.7960
+  Val Accuracy: 0.5100
 
 Época 2:
-  Loss: 0.7902
-  Accuracy: 0.5500
-  Val Loss: 0.7688
+  Loss: 5.7859
+  Accuracy: 0.4200
+  Val Loss: 5.7389
   Val Accuracy: 0.5000
 
 Época 3:
-  Loss: 0.7251
-  Accuracy: 0.5100
-  Val Loss: 0.7396
-  Val Accuracy: 0.4900
+  Loss: 5.7084
+  Accuracy: 0.5700
+  Val Loss: 5.7092
+  Val Accuracy: 0.5100
 
 Época 4:
-  Loss: 0.7017
-  Accuracy: 0.5100
-  Val Loss: 0.7262
+  Loss: 5.7596
+  Accuracy: 0.5300
+  Val Loss: 5.6661
   Val Accuracy: 0.5000
 
 Época 5:
-  Loss: 0.6857
-  Accuracy: 0.5400
-  Val Loss: 0.7225
-  Val Accuracy: 0.4800
+  Loss: 5.6725
+  Accuracy: 0.5000
+  Val Loss: 5.6285
+  Val Accuracy: 0.4900
 
 Época 6:
-  Loss: 0.6858
-  Accuracy: 0.5500
-  Val Loss: 0.7351
+  Loss: 5.6297
+  Accuracy: 0.4800
+  Val Loss: 5.5846
   Val Accuracy: 0.5000
 
 Época 7:
-  Loss: 0.7083
-  Accuracy: 0.4900
-  Val Loss: 0.7186
-  Val Accuracy: 0.5000
+  Loss: 5.5799
+  Accuracy: 0.4300
+  Val Loss: 5.5419
+  Val Accuracy: 0.4900
 
 Época 8:
-  Loss: 0.6888
-  Accuracy: 0.5300
-  Val Loss: 0.7041
+  Loss: 5.5347
+  Accuracy: 0.4500
+  Val Loss: 5.5008
   Val Accuracy: 0.5000
 
 Época 9:
-  Loss: 0.7049
-  Accuracy: 0.4900
-  Val Loss: 0.6997
+  Loss: 5.4876
+  Accuracy: 0.5700
+  Val Loss: 5.4601
   Val Accuracy: 0.5000
 
 Época 10:
-  Loss: 0.6895
-  Accuracy: 0.5600
-  Val Loss: 0.6981
+  Loss: 5.4436
+  Accuracy: 0.5300
+  Val Loss: 5.4177
+  Val Accuracy: 0.5100
+
+Época 11:
+  Loss: 5.4136
+  Accuracy: 0.5200
+  Val Loss: 5.3778
+  Val Accuracy: 0.5000
+
+Época 12:
+  Loss: 5.3659
+  Accuracy: 0.4700
+  Val Loss: 5.3356
+  Val Accuracy: 0.5000
+
+Época 13:
+  Loss: 5.3149
+  Accuracy: 0.5200
+  Val Loss: 5.2918
+  Val Accuracy: 0.5000
+
+Época 14:
+  Loss: 5.2707
+  Accuracy: 0.5200
+  Val Loss: 5.2495
+  Val Accuracy: 0.5000
+
+Época 15:
+  Loss: 5.2303
+  Accuracy: 0.5000
+  Val Loss: 5.2058
+  Val Accuracy: 0.5000
+
+Época 16:
+  Loss: 5.1957
+  Accuracy: 0.5200
+  Val Loss: 5.1636
   Val Accuracy: 0.4900
 
+Época 17:
+  Loss: 5.1442
+  Accuracy: 0.5300
+  Val Loss: 5.1223
+  Val Accuracy: 0.5000
+
+Época 18:
+  Loss: 5.1084
+  Accuracy: 0.5800
+  Val Loss: 5.0806
+  Val Accuracy: 0.4900
+
+Época 19:
+  Loss: 5.0605
+  Accuracy: 0.5000
+  Val Loss: 5.0386
+  Val Accuracy: 0.5000
+
+Época 20:
+  Loss: 5.0227
+  Accuracy: 0.4300
+  Val Loss: 4.9972
+  Val Accuracy: 0.5100
+
+Época 21:
+  Loss: 4.9804
+  Accuracy: 0.5900
+  Val Loss: 4.9560
+  Val Accuracy: 0.5000
+
+Época 22:
+  Loss: 4.9462
+  Accuracy: 0.5000
+  Val Loss: 4.9150
+  Val Accuracy: 0.4900
+
+Época 23:
+  Loss: 4.9068
+  Accuracy: 0.5100
+  Val Loss: 4.8742
+  Val Accuracy: 0.5400
+
+Época 24:
+  Loss: 4.8563
+  Accuracy: 0.4800
+  Val Loss: 4.8338
+  Val Accuracy: 0.4900
+
+Época 25:
+  Loss: 4.8216
+  Accuracy: 0.5700
+  Val Loss: 4.8107
+  Val Accuracy: 0.5000
+
+Época 26:
+  Loss: 4.8113
+  Accuracy: 0.4700
+  Val Loss: 4.7571
+  Val Accuracy: 0.5000
+
+Época 27:
+  Loss: 4.7399
+  Accuracy: 0.5100
+  Val Loss: 4.7138
+  Val Accuracy: 0.4900
+
+Época 28:
+  Loss: 4.6940
+  Accuracy: 0.5600
+  Val Loss: 4.6744
+  Val Accuracy: 0.5000
+
+Época 29:
+  Loss: 4.6614
+  Accuracy: 0.5500
+  Val Loss: 4.6352
+  Val Accuracy: 0.5000
+
+Época 30:
+  Loss: 4.6219
+  Accuracy: 0.4800
+  Val Loss: 4.5963
+  Val Accuracy: 0.5000
+
 === Avaliação Final ===
-Accuracy: 0.4900
-F1-score (macro): 0.4748
-AUC: 0.5004
+Accuracy: 0.5000
+F1-score (macro): 0.4048
+AUC: 0.4992
 
 Classification Report:
               precision    recall  f1-score   support
 
-        REAL       0.48      0.32      0.39        50
-        FAKE       0.49      0.66      0.56        50
+        REAL       0.50      0.10      0.17        50
+        FAKE       0.50      0.90      0.64        50
 
-    accuracy                           0.49       100
-   macro avg       0.49      0.49      0.47       100
-weighted avg       0.49      0.49      0.47       100
+    accuracy                           0.50       100
+   macro avg       0.50      0.50      0.40       100
+weighted avg       0.50      0.50      0.40       100
