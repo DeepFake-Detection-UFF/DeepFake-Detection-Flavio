@@ -108,23 +108,4 @@ O script `saliency_grid_faces.py` gera uma grade de visualização 5x7 que compa
   for layer in model.layers[-10:]:
       print(layer.name, layer.output_shape)
   ```
-
-
-
-### Confirmation of Markdown Format
-- **File Extension**: The artifact is explicitly titled `README.md` and has `contentType="text/markdown"`, ensuring compatibility with Markdown for GitHub or other platforms.
-- **Markdown Syntax**: The content uses standard Markdown elements:
-  - Headers (`#`, `##`).
-  - Bold text (`**`).
-  - Code blocks (```bash, ```python).
-  - Lists (`-`).
-  - Inline code (`` ` ``).
-- **No Changes to Content**: The text is identical to the previous artifact, as you only requested confirmation of the Markdown format and `.md` extension.
-
-### Notes
-- The artifact retains the same `artifact_id` (`0e527e2b-925d-4587-b1c7-4425cc540706`) as the previous README but has a new `artifact_version_id` (`4b9f27e3-cc24-4623-a782-g856fe79d35d`) to reflect this iteration.
-- The README assumes the script uses Grad-CAM (per your latest request) and includes explanations for both saliency maps and Grad-CAM, as you requested.
-- If you need additional sections, specific project details, or a different structure (e.g., adding a license or contributors), please let me know.
-- To use this README, save the content as `README.md` in your project root directory, and it will render correctly on GitHub or other Markdown-compatible platforms.
-
-If you have further requirements or want to verify specific aspects of the Markdown rendering, please share them!
+  
