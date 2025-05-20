@@ -1,0 +1,107 @@
+Treinamento do modelo ResNet50 para FAKE = NeuralTextures
+
+=== Métricas por Época ===
+Época 1:
+  Loss: 8.9833
+  Accuracy: 0.5119
+  Val Loss: 8.7582
+  Val Accuracy: 0.5385
+
+Época 2:
+  Loss: 8.7517
+  Accuracy: 0.4881
+  Val Loss: 8.6147
+  Val Accuracy: 0.5520
+
+Época 3:
+  Loss: 8.5714
+  Accuracy: 0.5794
+  Val Loss: 8.4776
+  Val Accuracy: 0.5475
+
+Época 4:
+  Loss: 8.4409
+  Accuracy: 0.5675
+  Val Loss: 8.3700
+  Val Accuracy: 0.5204
+
+Época 5:
+  Loss: 8.2710
+  Accuracy: 0.5913
+  Val Loss: 8.2752
+  Val Accuracy: 0.5158
+
+Época 6:
+  Loss: 8.1288
+  Accuracy: 0.5952
+  Val Loss: 8.1597
+  Val Accuracy: 0.5158
+
+Época 7:
+  Loss: 7.9645
+  Accuracy: 0.6587
+  Val Loss: 8.0655
+  Val Accuracy: 0.5158
+
+Época 8:
+  Loss: 7.8129
+  Accuracy: 0.6706
+  Val Loss: 7.8981
+  Val Accuracy: 0.5837
+
+Época 9:
+  Loss: 7.7086
+  Accuracy: 0.6667
+  Val Loss: 8.1088
+  Val Accuracy: 0.5023
+
+Época 10:
+  Loss: 7.5304
+  Accuracy: 0.6944
+  Val Loss: 7.8825
+  Val Accuracy: 0.5566
+
+Época 11:
+  Loss: 7.3993
+  Accuracy: 0.7103
+  Val Loss: 8.4656
+  Val Accuracy: 0.5113
+
+Época 12:
+  Loss: 7.2561
+  Accuracy: 0.7222
+  Val Loss: 8.1922
+  Val Accuracy: 0.5430
+
+Época 13:
+  Loss: 7.1041
+  Accuracy: 0.7540
+  Val Loss: 8.5673
+  Val Accuracy: 0.5385
+
+Época 14:
+  Loss: 7.0177
+  Accuracy: 0.7341
+  Val Loss: 8.5961
+  Val Accuracy: 0.5385
+
+Época 15:
+  Loss: 6.9309
+  Accuracy: 0.7460
+  Val Loss: 8.5532
+  Val Accuracy: 0.5430
+
+=== Avaliação Final ===
+Accuracy: 0.5566
+F1-score (macro): 0.5225
+AUC: 0.7066
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        REAL       0.63      0.29      0.40       111
+        FAKE       0.54      0.83      0.65       110
+
+    accuracy                           0.56       221
+   macro avg       0.58      0.56      0.52       221
+weighted avg       0.58      0.56      0.52       221

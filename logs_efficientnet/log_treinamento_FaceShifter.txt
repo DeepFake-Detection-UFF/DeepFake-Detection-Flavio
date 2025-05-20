@@ -1,0 +1,197 @@
+Treinamento do modelo EfficientNetB0 para FAKE = FaceShifter
+
+=== Métricas por Época ===
+Época 1:
+  Loss: 7.9208
+  Accuracy: 0.5397
+  Val Loss: 7.8181
+  Val Accuracy: 0.5695
+
+Época 2:
+  Loss: 7.7335
+  Accuracy: 0.5794
+  Val Loss: 7.6421
+  Val Accuracy: 0.5830
+
+Época 3:
+  Loss: 7.5593
+  Accuracy: 0.5476
+  Val Loss: 7.4722
+  Val Accuracy: 0.5830
+
+Época 4:
+  Loss: 7.3584
+  Accuracy: 0.6587
+  Val Loss: 7.3059
+  Val Accuracy: 0.5874
+
+Época 5:
+  Loss: 7.1896
+  Accuracy: 0.6429
+  Val Loss: 7.1411
+  Val Accuracy: 0.6054
+
+Época 6:
+  Loss: 7.0248
+  Accuracy: 0.6786
+  Val Loss: 6.9790
+  Val Accuracy: 0.6188
+
+Época 7:
+  Loss: 6.8656
+  Accuracy: 0.6389
+  Val Loss: 6.8212
+  Val Accuracy: 0.6278
+
+Época 8:
+  Loss: 6.6784
+  Accuracy: 0.6865
+  Val Loss: 6.6657
+  Val Accuracy: 0.6278
+
+Época 9:
+  Loss: 6.5385
+  Accuracy: 0.6944
+  Val Loss: 6.5122
+  Val Accuracy: 0.6457
+
+Época 10:
+  Loss: 6.3733
+  Accuracy: 0.7222
+  Val Loss: 6.3629
+  Val Accuracy: 0.6502
+
+Época 11:
+  Loss: 6.2149
+  Accuracy: 0.7381
+  Val Loss: 6.2155
+  Val Accuracy: 0.6502
+
+Época 12:
+  Loss: 6.0852
+  Accuracy: 0.7143
+  Val Loss: 6.0719
+  Val Accuracy: 0.6413
+
+Época 13:
+  Loss: 5.9323
+  Accuracy: 0.6905
+  Val Loss: 5.9300
+  Val Accuracy: 0.6413
+
+Época 14:
+  Loss: 5.7637
+  Accuracy: 0.7540
+  Val Loss: 5.7904
+  Val Accuracy: 0.6278
+
+Época 15:
+  Loss: 5.6250
+  Accuracy: 0.7659
+  Val Loss: 5.6557
+  Val Accuracy: 0.6368
+
+Época 16:
+  Loss: 5.4762
+  Accuracy: 0.7817
+  Val Loss: 5.5254
+  Val Accuracy: 0.6502
+
+Época 17:
+  Loss: 5.3210
+  Accuracy: 0.8175
+  Val Loss: 5.3993
+  Val Accuracy: 0.6547
+
+Época 18:
+  Loss: 5.2139
+  Accuracy: 0.7817
+  Val Loss: 5.2741
+  Val Accuracy: 0.6592
+
+Época 19:
+  Loss: 5.0968
+  Accuracy: 0.7897
+  Val Loss: 5.1534
+  Val Accuracy: 0.6592
+
+Época 20:
+  Loss: 4.9819
+  Accuracy: 0.7579
+  Val Loss: 5.0358
+  Val Accuracy: 0.6637
+
+Época 21:
+  Loss: 4.8177
+  Accuracy: 0.8175
+  Val Loss: 4.9241
+  Val Accuracy: 0.6726
+
+Época 22:
+  Loss: 4.6973
+  Accuracy: 0.8492
+  Val Loss: 4.8149
+  Val Accuracy: 0.6861
+
+Época 23:
+  Loss: 4.5736
+  Accuracy: 0.8651
+  Val Loss: 4.7146
+  Val Accuracy: 0.6951
+
+Época 24:
+  Loss: 4.4782
+  Accuracy: 0.8095
+  Val Loss: 4.6143
+  Val Accuracy: 0.6996
+
+Época 25:
+  Loss: 4.3674
+  Accuracy: 0.8254
+  Val Loss: 4.5004
+  Val Accuracy: 0.6951
+
+Época 26:
+  Loss: 4.2375
+  Accuracy: 0.8492
+  Val Loss: 4.3993
+  Val Accuracy: 0.7085
+
+Época 27:
+  Loss: 4.1309
+  Accuracy: 0.8373
+  Val Loss: 4.3194
+  Val Accuracy: 0.6996
+
+Época 28:
+  Loss: 4.0471
+  Accuracy: 0.8333
+  Val Loss: 4.3440
+  Val Accuracy: 0.6906
+
+Época 29:
+  Loss: 3.9407
+  Accuracy: 0.8571
+  Val Loss: 4.2646
+  Val Accuracy: 0.6951
+
+Época 30:
+  Loss: 3.8502
+  Accuracy: 0.8254
+  Val Loss: 4.1057
+  Val Accuracy: 0.7040
+
+=== Avaliação Final ===
+Accuracy: 0.7040
+F1-score (macro): 0.6996
+AUC: 0.7823
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        REAL       0.66      0.83      0.74       111
+        FAKE       0.77      0.58      0.66       112
+
+    accuracy                           0.70       223
+   macro avg       0.72      0.70      0.70       223
+weighted avg       0.72      0.70      0.70       223

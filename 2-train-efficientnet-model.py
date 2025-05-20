@@ -5,8 +5,8 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, accuracy_score, roc_auc_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
 import tensorflow as tf
-from tensorflow.keras.applications import VGG16
-from tensorflow.keras.applications.vgg16 import preprocess_input as preprocess_vgg
+from tensorflow.keras.applications import EfficientNetB0
+from tensorflow.keras.applications.efficientnet import preprocess_input
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
 from tensorflow.keras.optimizers import Adam
@@ -28,10 +28,10 @@ real_test_path = os.path.join(test_path, "original")
 fake_train_paths = {folder: os.path.join(train_path, folder) for folder in subfolders if folder != "original"}
 fake_test_paths = {folder: os.path.join(test_path, folder) for folder in subfolders if folder != "original"}
 
-# Função para criar o modelo VGG16
-def create_vgg_model():
-    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
-    for layer in base_model.layers[:-8]:  # Descongelar mais camadas
+# Função para criar o modelo EfficientNetB0
+def create_efficientnet_model():
+    base_model = EfficientNetB0(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+    for layer in base_model.layers[:-20]:  # Descongelar mais camadas para fine-tuning
         layer.trainable = False
     x = base_model.output
     x = GlobalAveragePooling2D()(x)
@@ -52,7 +52,7 @@ def load_images(real_path, fake_path, fake_name, dataset_type):
             continue
         img_resized = cv2.resize(img, (224, 224))
         img_rgb = cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB)
-        img_preprocessed = preprocess_vgg(img_rgb.astype('float32'))
+        img_preprocessed = preprocess_input(img_rgb.astype('float32'))
         X.append(img_preprocessed)
         y.append(0)  # REAL
     for image_name in tqdm(os.listdir(fake_path), desc=f"FAKE ({fake_name} - {dataset_type})"):
@@ -62,13 +62,13 @@ def load_images(real_path, fake_path, fake_name, dataset_type):
             continue
         img_resized = cv2.resize(img, (224, 224))
         img_rgb = cv2.cvtColor(img_resized, cv2.COLOR_BGR2RGB)
-        img_preprocessed = preprocess_vgg(img_rgb.astype('float32'))
+        img_preprocessed = preprocess_input(img_rgb.astype('float32'))
         X.append(img_preprocessed)
         y.append(1)  # FAKE
     return np.array(X), np.array(y)
 
 # Função para treinar e avaliar o modelo
-def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_path, fake_name):
+def train_efficientnet_model(real_train_path, fake_train_path, real_test_path, fake_test_path, fake_name):
     # Carregar dados de treino
     X_train, y_train = load_images(real_train_path, fake_train_path, fake_name, "training")
     if len(X_train) == 0:
@@ -95,12 +95,12 @@ def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_
     datagen.fit(X_train)
 
     # Criar e treinar o modelo
-    model = create_vgg_model()
+    model = create_efficientnet_model()
     # Callback para salvar métricas por época
-    log_file = f"logs_vgg/log_treinamento_{fake_name}.txt"
-    os.makedirs("logs_vgg", exist_ok=True)
+    log_file = f"logs_efficientnet/log_treinamento_{fake_name}.txt"
+    os.makedirs("logs_efficientnet", exist_ok=True)
     with open(log_file, "w") as f:
-        f.write(f"Treinamento do modelo VGG16 para FAKE = {fake_name}\n\n")
+        f.write(f"Treinamento do modelo EfficientNetB0 para FAKE = {fake_name}\n\n")
         f.write("=== Métricas por Época ===\n")
     
     class TrainingLogger(tf.keras.callbacks.Callback):
@@ -118,7 +118,7 @@ def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_
 
     history = model.fit(
         datagen.flow(X_train, y_train, batch_size=32),
-        epochs=30,  # Aumentar número de épocas
+        epochs=30,
         validation_data=(X_test, y_test),
         verbose=1,
         callbacks=[TrainingLogger(), early_stopping, lr_scheduler]
@@ -157,10 +157,9 @@ def train_vgg_model(real_train_path, fake_train_path, real_test_path, fake_test_
         f.write(classification_report(y_test, y_pred, target_names=["REAL", "FAKE"]))
     
     # Salvar modelo
-    os.makedirs("modelos_vgg", exist_ok=True)
-    model.save(f"modelos_vgg/vgg_{fake_name}.h5")
+    os.makedirs("modelos_efficientnet", exist_ok=True)
+    model.save(f"modelos_efficientnet/efficientnet_{fake_name}.h5")
     print(f"[INFO] Resultados salvos em {log_file}")
-
 
 def plot_learning_curves(history, fake_name):
     plt.figure(figsize=(12, 4))
@@ -177,10 +176,10 @@ def plot_learning_curves(history, fake_name):
     plt.show()
 
 # Função principal para treinar todos os modelos
-def train_all_vgg_models():
+def train_all_efficientnet_models():
     for fake_name in fake_train_paths.keys():
         print(f"\n[INFO] Treinando modelo para {fake_name}")
-        train_vgg_model(
+        train_efficientnet_model(
             real_train_path,
             fake_train_paths[fake_name],
             real_test_path,
@@ -189,4 +188,4 @@ def train_all_vgg_models():
         )
 
 # Executar
-train_all_vgg_models()
+train_all_efficientnet_models()

@@ -1,0 +1,71 @@
+Treinamento do modelo ResNet50 para FAKE = FaceShifter
+
+=== Métricas por Época ===
+Época 1:
+  Loss: 8.8803
+  Accuracy: 0.5198
+  Val Loss: 8.8085
+  Val Accuracy: 0.5022
+
+Época 2:
+  Loss: 8.6633
+  Accuracy: 0.5635
+  Val Loss: 8.5848
+  Val Accuracy: 0.5471
+
+Época 3:
+  Loss: 8.4323
+  Accuracy: 0.6667
+  Val Loss: 8.4926
+  Val Accuracy: 0.5336
+
+Época 4:
+  Loss: 8.1978
+  Accuracy: 0.7341
+  Val Loss: 8.4682
+  Val Accuracy: 0.5964
+
+Época 5:
+  Loss: 7.9792
+  Accuracy: 0.7619
+  Val Loss: 8.8723
+  Val Accuracy: 0.5740
+
+Época 6:
+  Loss: 7.7340
+  Accuracy: 0.8135
+  Val Loss: 9.3619
+  Val Accuracy: 0.5740
+
+Época 7:
+  Loss: 7.5257
+  Accuracy: 0.8413
+  Val Loss: 10.0423
+  Val Accuracy: 0.5740
+
+Época 8:
+  Loss: 7.3789
+  Accuracy: 0.8770
+  Val Loss: 10.2363
+  Val Accuracy: 0.5740
+
+Época 9:
+  Loss: 7.3173
+  Accuracy: 0.8452
+  Val Loss: 10.5433
+  Val Accuracy: 0.5561
+
+=== Avaliação Final ===
+Accuracy: 0.5964
+F1-score (macro): 0.5418
+AUC: 0.7457
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        REAL       0.56      0.95      0.70       111
+        FAKE       0.82      0.25      0.38       112
+
+    accuracy                           0.60       223
+   macro avg       0.69      0.60      0.54       223
+weighted avg       0.69      0.60      0.54       223
