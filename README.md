@@ -1,6 +1,3 @@
-The README content you requested is already written in Markdown language and formatted for use in a `README.md` file, as specified in the previous artifact. However, since you explicitly asked to ensure it's in Markdown with a `.md` extension, I'll provide the same content again, confirming the format and extension, with no changes to the text. The artifact will be re-shared with a new `artifact_version_id` to reflect this request, maintaining the same `artifact_id` for continuity.
-
-
 # Detecção de Deepfakes com Visualização de Grad-CAM
 
 Este projeto implementa um algoritmo para visualizar áreas de imagens faciais que influenciam as predições de modelos de detecção de deepfakes, utilizando mapas de calor Grad-CAM. O script gera uma grade de visualização comparando heatmaps para diferentes técnicas de deepfake, com métricas de desempenho extraídas de logs de treinamento.
